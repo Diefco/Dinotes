@@ -1,0 +1,82 @@
+/* imports*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/* variables definition */
+:root {
+	--main-darkblue: #16213e;
+	--main-blue: #0f3460;
+	--main-purple: #533483;
+	--main-pink: #e94560;
+	--main-yellow: #f4e180;
+}
+
+/* global CSS*/
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', arial, helvetica, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--main-darkblue);
+	color: #fff;
+}
+
+a {
+	color: var(--main-purple);
+}
+
+p,
+span {
+	font-size: 1rem;
+	line-height: 1.1rem;
+}
+
+/* flexbox*/
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.space-between {
+	justify-content: space-between;
+}
+
+.all-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* APP */
+header {
+	background-color: var(--main-blue);
+	padding: 0.6rem 1.2rem;
+}
+
+#logo img {
+	width: auto;
+	height: 4rem;
+}
+
+#logo span {
+	margin: 0 0 0 0.6rem;
+	font-size: 2.2rem;
+	font-weight: 700;
+	color: var(--main-yellow);
+}
+
+header .circle {
+	width: 3.8rem;
+	height: 3.8rem;
+	border: 3px solid var(--main-darkblue);
+	background-color: var(--main-yellow);
+	color: var(--main-darkblue);
+	border-radius: 50%;
+	font-size: 2rem;
+}
