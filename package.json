@@ -1,0 +1,19 @@
+{
+	"name": "dinotes",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"start": "nodemon app.js",
+		"css": "npx tailwindcss -i ./src/input.css -o ./public/css/main.css --watch"
+	},
+	"dependencies": {
+		"dotenv": "^16.0.2",
+		"ejs": "^3.1.8",
+		"express": "~4.16.1",
+		"morgan": "^1.10.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.20",
+		"tailwindcss": "^3.1.8"
+	}
+}
