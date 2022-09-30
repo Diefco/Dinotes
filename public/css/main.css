@@ -5,6 +5,7 @@
 :root {
 	--main-darkblue: #16213e;
 	--main-blue: #0f3460;
+	--main-lightblue: #57718f;
 	--main-purple: #533483;
 	--main-pink: #e94560;
 	--main-yellow: #f4e180;
@@ -27,10 +28,27 @@ a {
 	color: var(--main-purple);
 }
 
-p,
-span {
-	font-size: 1rem;
-	line-height: 1.1rem;
+/* scroll */
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: var(--main-lightblue) var(--main-darkblue);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+	background: var(--main-darkblue);
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: var(--main-lightblue);
+	border-radius: 10px;
+	border: 3px solid var(--main-darkblue);
 }
 
 /* flexbox*/
@@ -79,6 +97,7 @@ header .circle {
 	color: var(--main-darkblue);
 	border-radius: 50%;
 	font-size: 2rem;
+	transition: background-color 0.5s ease-in-out;
 }
 
 header .circle:hover {
@@ -94,6 +113,7 @@ header .circle:hover {
 }
 
 #app-notes {
+	position: relative;
 	padding: 1.2rem;
 }
 
@@ -101,7 +121,7 @@ header .circle:hover {
 	flex: 1;
 	display: flex;
 	background-color: #fff;
-	padding: 0.4rem 0.4rem;
+	padding: 0.2rem 0.2rem;
 	border-radius: 3rem;
 	width: 100%;
 }
@@ -112,7 +132,7 @@ header .circle:hover {
 	color: var(--main-darkblue);
 	border: 0;
 	font-size: 1rem;
-	padding: 0.6rem 0.4rem 0.6rem 1rem;
+	padding: 0.5rem 0.5rem 0.5rem 1rem;
 	border-radius: 3rem;
 }
 
@@ -131,7 +151,7 @@ header .circle:hover {
 	border-radius: 50%;
 	right: 1rem;
 	margin-left: 3px;
-	transition: all 0.5s;
+	transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 #button-search:hover {
@@ -143,28 +163,44 @@ header .circle:hover {
 	margin-top: 1rem;
 }
 
-#user-notes .note {
+#user-notes .notes {
 	background-color: var(--main-blue);
-	padding: 2rem 1.6rem 1rem;
+	padding: 1.8rem 1rem 1rem;
 	margin-bottom: 1.4rem;
 	border-radius: 0.3rem;
+	box-shadow: 0 2px 12px 0 rgba(6, 2, 52, 0.4);
 }
 
-#user-notes .note .title {
-	margin-bottom: 1.4rem;
+#user-notes .notes .title {
+	margin-bottom: 1.2rem;
 }
 
-#user-notes .note .date {
+#user-notes .notes .info {
 	margin-top: 1.4rem;
-	padding-top: 0.8rem;
-	border-top: 1px solid #fff;
+	padding: 0.8rem 0.5rem 0;
 	font-size: 0.7rem;
 	text-align: right;
-	opacity: 0.3;
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid var(--main-lightblue);
 }
 
-#user-notes .note .date .date-dinamyc {
+#user-notes .notes .info .date,
+#user-notes .notes .info .delete-notes {
+	opacity: 0.3;
+	transition: opacity 0.5s ease-in-out;
+}
+
+#user-notes .notes .info .date-dinamyc {
 	font-size: 0.7rem;
+}
+
+#user-notes .notes .delete-notes {
+	font-size: 1rem;
+}
+
+#user-notes .notes .info .delete-notes:hover {
+	opacity: 1;
 }
 
 #add-note {
@@ -182,9 +218,102 @@ header .circle:hover {
 	color: var(--main-darkblue);
 	border-radius: 50%;
 	font-size: 2rem;
+	transition: background-color 0.5s ease-in-out;
 }
 
 #add-note .circle:hover {
 	background-color: var(--main-pink);
 	color: var(--main-darkblue);
+}
+
+/* Single note */
+#single-note {
+	/* display: none; */
+	padding: 1rem;
+	margin-top: 1rem;
+}
+
+#single-note .content {
+	padding: 1.6rem 1.2rem 1rem;
+	background-color: var(--main-blue);
+	box-shadow: 0 2px 12px 0 rgba(6, 2, 52, 0.4);
+	min-height: 75vh;
+	border-bottom-left-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+}
+
+#single-note #note-title {
+	margin-bottom: 1.4rem;
+	padding-bottom: 1.4rem;
+	border-bottom: 1px solid var(--main-lightblue);
+}
+
+#single-note #note-content {
+	font-size: 1.15rem;
+	line-height: 1.6rem;
+}
+
+#single-note #note-content p {
+	margin-bottom: 1.2rem;
+}
+
+#single-note #actions {
+	padding: 0.55rem 1.3rem;
+	background-color: var(--main-lightblue);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 1.8rem;
+	box-shadow: 0 2px 12px 0 rgba(6, 2, 52, 0.4);
+	border-top-left-radius: 0.3rem;
+	border-top-right-radius: 0.3rem;
+}
+
+#single-note #back-notes-list {
+	font-size: 1.4rem;
+}
+
+#single-note #save-note {
+	color: var(--main-yellow);
+	transition: color 0.5s ease-in-out;
+}
+
+#single-note #save-note:hover {
+	color: var(--main-pink);
+}
+
+/* footer */
+footer {
+	padding: 1rem 1.3rem 1.6rem;
+	color: var(--main-lightblue);
+}
+
+footer .copy {
+	font-size: 0.9rem;
+	margin-top: 0.4rem;
+}
+
+@media screen and (min-width: 767px) {
+	#app {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	#app-notes {
+		max-width: 380px;
+		overflow-y: scroll;
+		max-height: 82vh;
+		padding-right: 0.6rem;
+		margin-right: 0.6rem;
+	}
+
+	#add-note {
+		bottom: 0rem;
+		position: absolute;
+	}
+
+	#single-note {
+		padding: 0 1rem 0 0;
+		display: block;
+	}
 }
