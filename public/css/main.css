@@ -53,7 +53,7 @@ span {
 	align-items: center;
 }
 
-/* APP */
+/* Header */
 header {
 	background-color: var(--main-blue);
 	padding: 0.6rem 1.2rem;
@@ -81,12 +81,19 @@ header .circle {
 	font-size: 2rem;
 }
 
+header .circle:hover {
+	background-color: var(--main-pink);
+	color: var(--main-darkblue);
+}
+
+/* App */
+
 #app {
 	max-width: 100%;
 	overflow: hidden;
 }
 
-#user-notes {
+#app-notes {
 	padding: 1.2rem;
 }
 
@@ -130,4 +137,54 @@ header .circle {
 #button-search:hover {
 	background-color: var(--main-purple);
 	color: #fff;
+}
+
+#user-notes {
+	margin-top: 1rem;
+}
+
+#user-notes .note {
+	background-color: var(--main-blue);
+	padding: 2rem 1.6rem 1rem;
+	margin-bottom: 1.4rem;
+	border-radius: 0.3rem;
+}
+
+#user-notes .note .title {
+	margin-bottom: 1.4rem;
+}
+
+#user-notes .note .date {
+	margin-top: 1.4rem;
+	padding-top: 0.8rem;
+	border-top: 1px solid #fff;
+	font-size: 0.7rem;
+	text-align: right;
+	opacity: 0.3;
+}
+
+#user-notes .note .date .date-dinamyc {
+	font-size: 0.7rem;
+}
+
+#add-note {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 99;
+}
+
+#add-note .circle {
+	width: 3.8rem;
+	height: 3.8rem;
+	border: 3px solid var(--main-darkblue);
+	background-color: var(--main-yellow);
+	color: var(--main-darkblue);
+	border-radius: 50%;
+	font-size: 2rem;
+}
+
+#add-note .circle:hover {
+	background-color: var(--main-pink);
+	color: var(--main-darkblue);
 }
