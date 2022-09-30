@@ -80,3 +80,54 @@ header .circle {
 	border-radius: 50%;
 	font-size: 2rem;
 }
+
+#app {
+	max-width: 100%;
+	overflow: hidden;
+}
+
+#user-notes {
+	padding: 1.2rem;
+}
+
+#user-search {
+	flex: 1;
+	display: flex;
+	background-color: #fff;
+	padding: 0.4rem 0.4rem;
+	border-radius: 3rem;
+	width: 100%;
+}
+
+#user-search input {
+	display: flex;
+	flex: 1;
+	color: var(--main-darkblue);
+	border: 0;
+	font-size: 1rem;
+	padding: 0.6rem 0.4rem 0.6rem 1rem;
+	border-radius: 3rem;
+}
+
+#user-search input:focus-visible {
+	outline: none;
+}
+
+#button-search {
+	display: flex;
+	align-items: center;
+	background-color: var(--main-pink);
+	color: var(--main-darkblue);
+	border: 3px solid var(--main-darkblue);
+	font-size: 1.2rem;
+	padding: 0.6rem;
+	border-radius: 50%;
+	right: 1rem;
+	margin-left: 3px;
+	transition: all 0.5s;
+}
+
+#button-search:hover {
+	background-color: var(--main-purple);
+	color: #fff;
+}
