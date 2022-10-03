@@ -11,15 +11,17 @@
 		<%- include('header'); -%>
 
 		<div id="app">
-			<div id="app-notes">
-				<div id="user-search">
-					<input
-						type="text"
-						id="search"
-						placeholder="Search your note here..." />
-					<button id="button-search" class="all-center">
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</button>
+			<section id="app-notes">
+				<div id="bg-user-search">
+					<div id="user-search">
+						<input
+							type="text"
+							id="search"
+							placeholder="Search your note here..." />
+						<button id="button-search" class="all-center">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</div>
 				</div>
 				<div id="user-notes">
 					<!-- Todo: Delete .note when dinamycs notes JS.-->
@@ -185,9 +187,9 @@
 						<i class="fa-solid fa-plus"></i>
 					</div>
 				</div>
-			</div>
-			<div id="single-note">
-				<div id="actions">
+			</section>
+			<section id="single-note">
+				<div id="actions" class="test juan clasesita pedrito">
 					<div id="back-notes-list">
 						<i class="fa-solid fa-arrow-left"></i>
 					</div>
@@ -196,42 +198,19 @@
 					</div>
 				</div>
 				<div class="content">
-					<h1 id="note-title">
-						I am the title of a line note enough long
-					</h1>
-					<div id="note-content">
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Aperiam facere earum natus maiores, in autem.
-							Mollitia, optio? Quas similique id exercitationem
-							cupiditate? Asperiores repellat eos perferendis
-							illum? Reiciendis, cumque minima?
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Ab cupiditate nam quasi cumque deserunt fugiat
-							assumenda consectetur quaerat eos amet qui
-							laboriosam, recusandae sit magni odit nulla dicta
-							aliquid repellat. Lorem ipsum dolor sit amet
-							consectetur adipisicing elit. Exercitationem fugiat
-							ex, similique natus libero delectus nostrum animi,
-							beatae sit temporibus nisi commodi nihil, veniam
-							culpa quod deleniti placeat excepturi impedit?
-						</p>
-
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing
-							elit. Maiores facilis sunt laboriosam aspernatur
-							quidem laborum dolor asperiores rerum, aliquid
-							facere. Magni repellendus dolore hic obcaecati
-							ducimus aliquid doloribus optio ad.
-						</p>
-					</div>
+					<h1 id="note-title" contenteditable="true" role="tex"></h1>
+					<div
+						id="note-content"
+						contenteditable="true"
+						role="textbox"
+						aria-label="Start writing your idea here..."></div>
 				</div>
-			</div>
+			</section>
 		</div>
 
 		<%- include('footer'); -%>
+
+		<script src="/src/js/note-interaction.js"></script>
 
 		<script
 			src="https://kit.fontawesome.com/1155cd00ae.js"
