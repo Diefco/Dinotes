@@ -28,6 +28,10 @@ a {
 	color: var(--main-purple);
 }
 
+.hidden {
+	display: none;
+}
+
 /* scroll */
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -165,6 +169,7 @@ header .circle:hover {
 	right: 1rem;
 	margin-left: 3px;
 	transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+	cursor: pointer;
 }
 
 #button-search:hover {
@@ -221,6 +226,7 @@ header .circle:hover {
 	bottom: 1rem;
 	right: 1rem;
 	z-index: 99;
+	cursor: pointer;
 }
 
 #add-note .circle {
@@ -237,6 +243,40 @@ header .circle:hover {
 #add-note .circle:hover {
 	background-color: var(--main-pink);
 	color: var(--main-darkblue);
+}
+
+/* No selected note */
+#no-selected-note {
+	/* display: none; */
+	padding: 1rem;
+	margin-top: 1rem;
+	width: 100%;
+	position: relative;
+	cursor: pointer;
+}
+
+#no-selected-note .row {
+	min-height: 64vh;
+}
+
+#no-selected-note .circle {
+	border: 5px solid var(--main-lightblue);
+	color: var(--main-lightblue);
+	font-size: 5rem;
+	border-radius: 50%;
+	padding: 2rem;
+	width: 150px;
+	height: 150px;
+	margin: auto;
+}
+
+#no-selected-note span {
+	color: var(--main-lightblue);
+	text-align: center;
+	display: block;
+	margin-top: 2rem;
+	max-width: 280px;
+	font-size: 1.4rem;
 }
 
 /* Single note */
@@ -276,6 +316,16 @@ header .circle:hover {
 #single-note #note-title:focus-visible,
 #single-note #note-content:focus-visible {
 	outline: none;
+}
+
+#single-note #note-title[placeholder]:empty::before,
+#single-note #note-content[placeholder]:empty::before {
+	content: attr(placeholder);
+}
+
+#single-note #note-title[placeholder]:empty:focus::before,
+#single-note #note-content[placeholder]:empty:focus::before {
+	content: '';
 }
 
 #single-note #note-content p {
@@ -326,6 +376,7 @@ footer .copy {
 	}
 
 	#app-notes {
+		min-width: 380px;
 		max-width: 380px;
 		overflow-y: scroll;
 		max-height: 82vh;
@@ -337,12 +388,15 @@ footer .copy {
 		bottom: 0.4rem;
 		position: sticky;
 		display: flex;
-		flex-direction: row-reverse;
+		justify-content: center;
+	}
+
+	#no-selected-note .row {
+		min-height: 77vh;
 	}
 
 	#single-note {
 		padding: 0 1rem 0 0;
-		display: block;
 	}
 
 	#single-note .content {

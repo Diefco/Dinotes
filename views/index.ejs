@@ -23,172 +23,27 @@
 						</button>
 					</div>
 				</div>
-				<div id="user-notes">
-					<!-- Todo: Delete .note when dinamycs notes JS.-->
-					<div class="notes">
-						<div class="content">
-							<h3 class="title">
-								I am the title of a 2-line note enough long
-							</h3>
-							<div class="desc">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Aperiam facere earum natus
-								maiores, in autem. Mollitia, optio? Quas
-								similique id exercitationem cupiditate?
-								Asperiores repellat eos perferendis illum?
-								Reiciendis, cumque minima?
-							</div>
-							<div class="info">
-								<div class="actions-notes">
-									<div class="delete-notes">
-										<i class="fa-solid fa-trash"></i>
-									</div>
-								</div>
-								<div class="date">
-									last change in
-									<span class="date-dinamyc">29-09-2022</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="notes">
-						<div class="content">
-							<h3 class="title">
-								I am the title of a 2-line note enough long
-							</h3>
-							<div class="desc">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Aperiam facere earum natus
-								maiores, in autem. Mollitia, optio? Quas
-								similique id exercitationem cupiditate?
-								Asperiores repellat eos perferendis illum?
-								Reiciendis, cumque minima?
-							</div>
-							<div class="info">
-								<div class="actions-notes">
-									<div class="delete-notes">
-										<i class="fa-solid fa-trash"></i>
-									</div>
-								</div>
-								<div class="date">
-									last change in
-									<span class="date-dinamyc">29-09-2022</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="notes">
-						<div class="content">
-							<h3 class="title">
-								I am the title of a 2-line note enough long
-							</h3>
-							<div class="desc">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Aperiam facere earum natus
-								maiores, in autem. Mollitia, optio? Quas
-								similique id exercitationem cupiditate?
-								Asperiores repellat eos perferendis illum?
-								Reiciendis, cumque minima?
-							</div>
-							<div class="info">
-								<div class="actions-notes">
-									<div class="delete-notes">
-										<i class="fa-solid fa-trash"></i>
-									</div>
-								</div>
-								<div class="date">
-									last change in
-									<span class="date-dinamyc">29-09-2022</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="notes">
-						<div class="content">
-							<h3 class="title">
-								I am the title of a 2-line note enough long
-							</h3>
-							<div class="desc">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Aperiam facere earum natus
-								maiores, in autem. Mollitia, optio? Quas
-								similique id exercitationem cupiditate?
-								Asperiores repellat eos perferendis illum?
-								Reiciendis, cumque minima?
-							</div>
-							<div class="info">
-								<div class="actions-notes">
-									<div class="delete-notes">
-										<i class="fa-solid fa-trash"></i>
-									</div>
-								</div>
-								<div class="date">
-									last change in
-									<span class="date-dinamyc">29-09-2022</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="notes">
-						<div class="content">
-							<h3 class="title">
-								I am the title of a 2-line note enough long
-							</h3>
-							<div class="desc">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Aperiam facere earum natus
-								maiores, in autem. Mollitia, optio? Quas
-								similique id exercitationem cupiditate?
-								Asperiores repellat eos perferendis illum?
-								Reiciendis, cumque minima?
-							</div>
-							<div class="info">
-								<div class="actions-notes">
-									<div class="delete-notes">
-										<i class="fa-solid fa-trash"></i>
-									</div>
-								</div>
-								<div class="date">
-									last change in
-									<span class="date-dinamyc">29-09-2022</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="notes">
-						<div class="content">
-							<h3 class="title">
-								I am the title of a 2-line note enough long
-							</h3>
-							<div class="desc">
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Aperiam facere earum natus
-								maiores, in autem. Mollitia, optio? Quas
-								similique id exercitationem cupiditate?
-								Asperiores repellat eos perferendis illum?
-								Reiciendis, cumque minima?
-							</div>
-							<div class="info">
-								<div class="actions-notes">
-									<div class="delete-notes">
-										<i class="fa-solid fa-trash"></i>
-									</div>
-								</div>
-								<div class="date">
-									last change in
-									<span class="date-dinamyc">29-09-2022</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				<div id="user-notes"></div>
 				<div id="add-note">
 					<div class="circle all-center">
 						<i class="fa-solid fa-plus"></i>
 					</div>
 				</div>
 			</section>
-			<section id="single-note">
+			<section id="no-selected-note">
+				<div class="row all-center">
+					<div class="text-center">
+						<div class="circle all-center">
+							<i class="fa-solid fa-plus"></i>
+						</div>
+						<span
+							>Select a note or click here for create new
+							note.</span
+						>
+					</div>
+				</div>
+			</section>
+			<section id="single-note" class="hidden">
 				<div id="actions" class="test juan clasesita pedrito">
 					<div id="back-notes-list">
 						<i class="fa-solid fa-arrow-left"></i>
@@ -198,12 +53,16 @@
 					</div>
 				</div>
 				<div class="content">
-					<h1 id="note-title" contenteditable="true" role="tex"></h1>
+					<h1
+						id="note-title"
+						contenteditable="true"
+						role="tex"
+						placeholder="Title of your note."></h1>
 					<div
 						id="note-content"
 						contenteditable="true"
 						role="textbox"
-						aria-label="Start writing your idea here..."></div>
+						placeholder="Start writing your idea here..."></div>
 				</div>
 			</section>
 		</div>
