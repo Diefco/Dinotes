@@ -3,13 +3,17 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"start": "nodemon app.js",
+		"dev": "nodemon app.js",
+		"start": "node app.js",
 		"css": "npx tailwindcss -i ./src/input.css -o ./public/css/main.css --watch"
 	},
 	"dependencies": {
+		"bcryptjs": "^2.4.3",
 		"dotenv": "^16.0.2",
 		"ejs": "^3.1.8",
 		"express": "~4.16.1",
+		"express-session": "^1.17.3",
+		"mongoose": "^6.6.5",
 		"morgan": "^1.10.0"
 	},
 	"devDependencies": {
