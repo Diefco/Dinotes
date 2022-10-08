@@ -7,6 +7,7 @@ const bcryptjs = require('bcryptjs');
 
 // Initializations
 const app = express();
+require('./config/db');
 
 // Settings
 dotenv.config({ path: './config/.env' });

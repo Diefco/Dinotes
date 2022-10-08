@@ -5,4 +5,8 @@ router.get('/', (req, res) => {
 	res.render('index');
 });
 
+router.get('/about', (req, res) => {
+	res.render('About of Dinotes');
+});
+
 module.exports = router;
