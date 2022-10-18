@@ -1,0 +1,67 @@
+#dFancyBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 99;
+	background-color: rgba(21, 32, 60, 0.4);
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 1rem 1.3rem 1rem 1rem;
+}
+
+#dFancyBox .fancyContent {
+	width: 380px;
+	max-width: 100%;
+	height: auto;
+	padding: 3rem 2rem;
+	background-color: #0f3460;
+	box-shadow: 0 1px 15px rgba(57, 57, 57, 0.35);
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-radius: 1rem;
+	color: white;
+	text-align: center;
+}
+
+#fancy-msg {
+	margin: 0.5rem 0;
+}
+
+#dFancyBox .fancy-icon {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+	position: relative;
+}
+
+#dFancyBox .fancy-title {
+	font-size: 1.8rem;
+	margin: 0.8rem 0;
+}
+
+#dFancyBox .fancy-button {
+	padding: 0.8rem 1.2rem;
+	border-radius: 0.4rem;
+	margin: 0.8rem 0.6rem 0;
+	transition: all 0.5s;
+	font-weight: 700;
+	border: 0;
+	color: var(--main-darkblue);
+}
+
+#dFancyBox .fancy-btnConfirm {
+	background-color: var(--main-yellow);
+}
+
+#dFancyBox .fancy-btnConfirm:hover {
+	background-color: #ddc33e;
+}
+
+#dFancyBox .fancy-btnDenied {
+	background-color: var(--main-pink);
+}
+
+#dFancyBox .fancy-btnDenied:hover {
+	background-color: #dc2544;
+}
